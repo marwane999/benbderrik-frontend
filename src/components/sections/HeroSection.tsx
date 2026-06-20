@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { Star, ChevronRight } from "lucide-react";
@@ -96,12 +97,17 @@ export function HeroSection() {
             <div className="absolute -left-4 -top-4 h-32 w-32 rounded-xl bg-secondary/10" />
             <div className="relative flex h-full items-center justify-center rounded-2xl bg-gradient-to-br from-primary-light/20 to-primary-dark/50 p-8">
               <div className="text-center">
-                <div className="mx-auto mb-4 h-32 w-32 rounded-full bg-gradient-secondary p-0.5">
-                  <div className="flex h-full w-full items-center justify-center rounded-full bg-primary-dark text-4xl text-white">
-                    MB
-                  </div>
+                <div className="mx-auto mb-4 h-40 w-40 overflow-hidden rounded-full border-2 border-secondary/30">
+                  <Image
+                    src="/images/Profile-img.png"
+                    alt="Maître Mohamed Ben Abderrazik"
+                    width={200}
+                    height={200}
+                    className="h-full w-full object-cover"
+                    priority
+                  />
                 </div>
-                <p className="font-accent text-lg text-white/80">
+                <p className="font-heading text-xl text-white">
                   Maître Mohamed Ben Abderrazik
                 </p>
                 <p className="mt-1 text-sm text-secondary">
